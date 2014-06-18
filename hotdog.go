@@ -21,16 +21,22 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	index := rand.Intn(len(whatHeSaid))
 
 	fmt.Fprintf(w, fmt.Sprintf(`
+		<!doctype html>
 		<html>
-			<style type="text/css">
-				div {
-					text-align: center; 
-					font-family: Arial,sans-serif; 
-					font-weight: bold; 
-					font-size: 52t pt
-				}
-			</style>
-			<div>%s</div>
+			<head>
+				<title>What Did Alex Say Today?</title>
+				<style>
+					div {
+						text-align: center; 
+						font-family: Arial,sans-serif; 
+						font-weight: bold; 
+						font-size: 52t pt
+					}
+				</style>
+			</head>
+			<body>
+				<div>%s</div>
+			</body>
 		</html>`, whatHeSaid[index]))
 }
 
