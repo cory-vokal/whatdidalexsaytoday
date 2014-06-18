@@ -35,6 +35,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 				</style>
 			</head>
 			<body>
+				<img src="http://vokalinteractive.com/wp-content/uploads/2014/05/alex_nimmer_largeb.png"><br><br>
 				<div>%s</div>
 			</body>
 		</html>`, whatHeSaid[index]))
